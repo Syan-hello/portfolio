@@ -1,0 +1,96 @@
+
+
+#projectModal .modal-dialog {
+    max-width: 95%; 
+    margin: 0.5rem auto;
+    height: calc(100dvh - 1rem); 
+    display: flex;
+    align-items: center;
+}
+
+#projectModal .modal-content {
+    height: auto;
+    max-height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+
+#modalCarouselInner {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+   
+}
+
+#modalCarouselInner .carousel-item {
+    height: 100%;
+}
+
+
+.modal-slider-helper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+#modalCarouselInner img {
+    max-height: 100%; 
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+
+.btn-close {
+    padding: 1rem;
+    margin: 0;
+}
+
+
+@media (max-width: 991.98px) {
+    #artworkModal .modal-body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden; 
+    }
+
+    /* Die Text-Spalte oben */
+    #artworkModal .col-lg-4 {
+        height: 35% !important; 
+        order: 1; 
+        padding: 1.5rem !important; 
+        border-right: none !important;
+        border-bottom: 1px solid #333;
+        overflow-y: auto; 
+    }
+
+    /* Die Bild-Spalte unten */
+    #artworkModal .col-lg-8 {
+        height: 65% !important; 
+        order: 2;
+    }
+
+
+    #artworkModal .btn-close {
+        padding: 2rem !important; 
+        font-size: 1rem;
+    }
+}
+
+
+#modalCarouselInner .carousel-item {
+    height: 100%;
+    
+}
+
+#modalCarouselInner .carousel-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+}

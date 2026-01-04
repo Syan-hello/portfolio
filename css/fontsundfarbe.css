@@ -1,0 +1,108 @@
+/* rubik-300 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik Light';
+    font-style: normal;
+    font-weight: 300;
+    src: url('../fonts/rubik-v28-latin/rubik-v28-latin-300.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+/* rubik-regular - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik Regular';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/rubik-v28-latin/rubik-v28-latin-regular.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* rubik-500 - latin */
+@font-face {
+    font-display: swap;
+    /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Rubik Bold';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/rubik-v28-latin/rubik-v28-latin-500.woff2') format('woff2');
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+
+  :root{
+    --white: rgba(215, 215, 215, 0.703);
+    --grau: #747474;
+    --blau: #4cc4f7;
+    --gelb: #FCF8CD;
+    --rot: #fa5480;
+    --rosa:  #fd7ea0;;
+    --green:#0F0;
+    --light: rgb(253, 250, 244); 
+}
+
+.bg-light {
+    background-color: rgb(253, 250, 244) !important;  
+     
+}
+
+
+
+.display-7 {
+    font-size: 1.6rem;
+}
+
+
+
+body{
+    font-family: 'Rubik Light';
+    color: #333;
+    background-color: var(--light);
+
+ 
+}
+
+.text-gruen {
+       color: rgb(141, 225, 141) !important;
+}
+
+.bg-light {
+    color: #333 !important;
+}
+
+h2 p{
+    color: #FCF8CD ;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+.bg-black {
+    background-color: #333 !important;
+}
+
+.text-rosa {
+    color: var(--rosa);
+    font-family:'Rubik' ;
+}
+
+main{
+    background: linear-gradient(to top right , var(--) 50%, var(--green) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    z-index: 10;
+}
+body{
+
+    background: linear-gradient(to right , var(--rosa) 90%, #333 10%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    z-index: 10;
+}

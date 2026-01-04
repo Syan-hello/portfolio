@@ -1,0 +1,143 @@
+#navId{
+    top: 0px;
+    display: block;
+    position: sticky;
+    z-index: 400;
+}
+
+
+  /* ____________Menueee______________________________*/
+  
+
+  #menue.einblenden{     
+    height: 100vh;
+    padding-top: 90px ;
+
+  }
+
+  #menue {
+    position: absolute;
+    background-color: #fb628b;
+    background-color:  #fd7ea0;
+    z-index: 1000;
+    width: 100%;
+    _border-bottom:solid 0.1rem;
+    text-align: end;
+  }
+
+  nav ul{
+    height: 0px; /* !!!!!! Höhe auf 0, damit die Menu punkte verschwinden */
+    overflow: hidden;
+    transition: all 1s; 
+
+  }
+
+ .nav-link {
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: start;
+   
+  }
+  nav ul li a:hover{
+    color:#ff8282;
+  }
+
+  #icon{
+    display: block; /* !!!!!! Icon wird eingeblendet */
+  }
+
+  #menue span{
+    background-color: #4cc4f7;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+  
+  }
+
+   .nav-link {
+    text-decoration: none;
+    font-size: 5rem;
+    _text-align: center;
+    margin-left: 5rem;
+    color:#ececec;
+  }
+
+  .nav-link:hover {
+    background-color: #4cc4f7;
+    text-decoration: none;
+    color:#ececec;
+  }
+  #icon{
+    position:absolute;
+    width:60px;
+    height: 60px;
+    top: 1.6rem;
+    right: 2%;
+    z-index: 1200;
+    
+  }
+
+  /* einzelen Linien*/
+
+  #icon span{
+    position:absolute;
+    height: 8px;
+    border-radius: 4px;
+    width: 50px;    
+    background-color: var(--gelb);
+    border: solid 0.5px #000;
+    display: block;
+    transition: all 0.5s;
+    z-index: 2000;
+  }
+
+
+
+  #icon span:nth-child(1){
+    top: 0px;
+  }
+  #icon span:nth-child(2){
+    top: 15px;
+  }
+  #icon span:nth-child(3){
+    top: 30px;
+  }
+
+
+  /* Kreuz mit Rotation  */
+
+  #icon.kreuz span:nth-child(1) {
+    transform: rotate(-135deg); 
+    top: 19px;
+    height: 4px;
+    background-color: var(--gelb);
+  }
+
+  #icon.kreuz span:nth-child(2) {
+    transform: rotate(135deg);
+    top: 18px;
+    background-color: var(--gelb);
+  }
+
+  #icon.kreuz span:nth-child(3) {
+    transform: rotate(135deg);
+    top: 18px;
+    background-color: var(--gelb);
+  }
+
+
+@media (max-width: 800px) {
+   .nav-link {
+    text-decoration: none;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-left: 1.4rem;
+
+   
+  }
+  
+}
+
+
+
+  

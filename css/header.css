@@ -1,0 +1,75 @@
+/* 1. Die Sektion bekommt eine feste Mindestgröße */
+#hero {
+    display: flex;
+    align-items: center;
+    height: 95vh;         /* 90% der Bildschirmhöhe */
+    min-height: 600px;    /* Aber mindestens 600px (gut für Laptops) */
+    width: 100%;
+    overflow: hidden;     /* Verhindert Scrollbalken, falls was übersteht */
+}
+
+/* 2. Damit die Höhe durchgereicht wird */
+#hero .row,
+#heroCarousel,
+#heroCarousel .carousel-inner,
+#heroCarousel .carousel-item {
+    height: 100%; 
+}
+
+/* 3. Der "Trick": Ein innerer Container für Flexbox */
+/* Das darf NICHT auf .carousel-item liegen, sondern hier drin */
+.slider-helper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Horizontal mittig */
+    align-items: center;     /* Vertikal mittig */
+    padding: 2rem;           /* Etwas Abstand zum Rand */
+}
+
+/* 4. Bilder bändigen */
+.slider-helper img {
+    max-height: 60vh;  /* Darf nicht höher als der Bereich sein */
+    max-width: 100%;   /* Darf nicht breiter sein */
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Zeigt das ganze Bild unverzerrt */
+   
+}
+
+/* Standard für Desktop */
+#hero {
+    height: 100vh;
+    min-height: 600px;
+    width: 100%;
+    overflow: hidden;
+}
+
+#hero .container {
+    height: 100%;
+}
+
+/* Mobile Optimierung */
+@media (max-width: 991px) { /* Bootstrap LG-Breakpoint */
+    #hero {
+        height: auto;        /* Höhe passt sich dem Inhalt an */
+        min-height: 100vh;   /* Mindestens einmal Bildschirm füllen */
+        overflow: visible;   /* Nichts abschneiden */
+        padding-top: 80px;   /* Platz für Navbar oben */
+        padding-bottom: 50px;
+    }
+
+    #hero .container {
+        height: auto;        /* Container nicht mehr auf 100% zwingen */
+    }
+
+    .slider-helper {
+        height: 400px; 
+        margin-top: 5rem;      /* Feste Höhe für das Bild auf Mobile */
+        padding: 1rem 0;
+    }
+
+    .slider-helper img {
+        max-height: 100%;    /* Bild nutzt die 400px vom Helper */
+    }
+}

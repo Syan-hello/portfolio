@@ -1,0 +1,79 @@
+
+#weitere_projekte .card {
+    background: transparent;
+    border: none;
+    position: relative; 
+
+    height: 300px; 
+    width: 100%;
+
+    cursor: pointer;
+    overflow: visible; 
+    transform: scale(0.9); 
+    margin: 10px; 
+    width: auto; 
+  
+}
+
+#weitere_projekte .card:hover {
+    transform: scale(1); 
+    z-index: 10; 
+}
+
+
+#weitere_projekte .card img {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    transition: all 0.4s ease-out; 
+    transform-origin: center bottom; 
+}
+
+
+
+#weitere_projekte .card img:nth-child(1) {
+    z-index: 3;
+    transform: rotate(0deg);
+}
+
+
+#weitere_projekte .card img:nth-child(2) {
+    z-index: 2;
+    transform: rotate(-6deg) translate(-5px, 2px); 
+}
+
+
+#weitere_projekte .card img:nth-child(3) {
+    z-index: 1;
+    transform: rotate(6deg) translate(5px, 2px); 
+}
+
+
+#weitere_projekte .card img:nth-child(n+4) {
+    display: none;
+}
+
+
+#weitere_projekte .card:hover img:nth-child(1) {
+    transform: translateY(-10px) scale(1.05); 
+}
+
+#weitere_projekte .card:hover img:nth-child(2) {
+    transform: rotate(-15deg) translate(-20px, 10px); 
+}
+
+#weitere_projekte .card:hover img:nth-child(3) {
+    transform: rotate(15deg) translate(20px, 10px); 
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

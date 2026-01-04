@@ -1,0 +1,54 @@
+*{
+    box-sizing: border-box;
+}
+main{
+    font-family: 'Rubik Regular';
+    color: var(--rot);
+    padding: 1rem;
+
+}
+
+p, a, li, h1, h2, h3, h4 {
+    overflow-wrap: break-word; 
+    word-wrap: break-word;     
+    hyphens: auto;            
+    max-width: 100%;           
+}
+
+a{
+    color: #333;
+    word-break: normal !important;
+
+}
+
+p{
+    max-width: 800px;
+}
+
+h1, h2, h3, h4, li{
+
+    max-width: 600px;
+}
+
+address{
+    flex-wrap: wrap;
+    max-width: 800px;
+    padding: 2rem 0rem 2rem 0rem;
+    
+}
+
+ul { 
+    padding: 0;
+}
+
+ul li {
+    list-style: none;
+    font-style: normal;
+    
+}
+
+img{
+    max-width: 100%;
+    border-radius: 1rem;
+    max-width: 200px;
+}

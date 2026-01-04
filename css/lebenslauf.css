@@ -1,0 +1,123 @@
+#lebenslauf .card{
+    background-color: var(--light);
+    font-size: 1.5rem;
+    border: none;
+    border: solid #333 1px !important;
+    border-radius: 8px;
+    box-shadow: 1.5rem 1.2rem 0rem 0.1rem #333 ;  
+    margin-bottom: 4rem;
+    object-fit: cover;
+    margin-left: 4rem;
+    
+}
+
+#lebenslauf .card-body {
+    background-color: var(--light);
+    padding: 1.2rem;
+    border-top: solid #333;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    
+
+}
+
+#lebenslaufCarousel {
+    max-width: 1600px;
+}
+.list-group-item {
+
+  background-color:var(--light);
+    
+}
+.list-group-item:hover {
+    transform: rotate3d(4, 0, 0, 45deg); 
+    transition: transform 0.1s ease;
+  
+}
+
+.badge {
+    background-color: white;
+    color: #333;
+    border: solid #333;
+    border-radius: 6px !important ;
+}
+.list-group-item {
+    border: solid #333 1px !important;
+    border-radius: 5px !important;
+    margin-bottom: 0.5rem;
+}
+
+.portrait {
+    border: solid #333 1px !important;
+    border-radius: 5px !important;
+    margin-bottom: 0.5rem;
+}
+
+
+
+
+/* Den Textbereich flexibel machen */
+.cv-card .card-body {
+    flex-grow: 1 ; /* Füllt den restlichen Platz aus */
+}
+
+
+
+/* 1. Das Carousel-Item und der d-flex Container müssen die volle Höhe einnehmen */
+#lebenslaufCarousel .carousel-inner,
+#lebenslaufCarousel .carousel-item,
+#lebenslaufCarousel .carousel-item > div { 
+    height: 100%;
+}
+
+/* 2. Die Karte selbst auf 100% zwingen */
+#lebenslauf .cv-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    min-height: 450px; 
+    max-width: 550px;
+}
+
+/* 3. WICHTIG: Damit der Schatten nicht abgeschnitten wird */
+#lebenslaufCarousel .carousel-inner {
+    padding-right: 2rem;  
+    padding-bottom: 2rem; 
+    margin: -1rem;       
+}
+
+/* Für alle Ansichten: Standard-Zentrierung sicherstellen */
+#lebenslaufCarousel .carousel-item > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Karten oben bündig */
+    width: 100%;
+}
+
+/* Mobile Fix */
+@media (max-width: 768px) {
+   
+    /* 1. Den Container-Abstand zurücksetzen */
+    #lebenslaufCarousel .carousel-inner {
+        padding: 0 10px 20px 10px !important; /* Gleichmäßiges Padding links/rechts */
+        margin: 0 !important;
+        overflow: visible; 
+    }
+
+    /* 2. Die Karte zentrieren */
+    #lebenslauf .cv-card {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 85% !important; /* Etwas Platz zu den Pfeilen lassen */
+        
+        box-shadow: 0.5rem 0.5rem 0rem 0rem #333 !important; 
+        font-size: 1rem;
+        min-height: 350px;
+    }
+    
+    /* 3. Die Pfeile positionieren, damit sie nicht die Karte überlagern */
+    .carousel-control-prev, 
+    .carousel-control-next {
+        width: 40px; 
+    }
+}

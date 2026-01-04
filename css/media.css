@@ -1,0 +1,124 @@
+#myselfId {
+    display: block;
+    width: 60px;
+    height: 120px;
+    background-image: url(/img/SVG/ich_skate2.svg);
+    background-repeat: no-repeat;
+    position: fixed;
+    right: 5px; 
+}
+
+#sesselId{
+    position: fixed;
+}
+
+
+#webich {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+#webich img{
+    width: 100%;
+    max-width: 200px;
+    border-radius: 0.5rem;
+}
+
+
+@media (min-width: 767px){
+
+    #myselfId {
+        display: flex;
+        justify-content: end;
+        width: 70px;
+        height: 70px;
+        background-image: url(../img/SVG/ich_skate2.svg);
+        background-repeat: no-repeat;
+        _background-color: rgb(255, 64, 0);
+        object-fit: cover;
+        position: fixed;
+        z-index: 9002;
+    }
+    
+    
+}
+
+
+
+
+
+@media (min-width: 1024px){
+
+    #myselfId {
+        width: 130px;
+        height: 130px;
+        animation-fill-mode: forwards; 
+        z-index: 99002;
+        animation-name: example;
+        animation-duration: 8s;
+        animation-delay: 2s;
+
+       }  
+
+
+    #sesselId {
+        transform: scaleX(-1);
+        width: 10rem;
+        height: 10rem;
+        position: fixed;
+        right: 2%;
+        bottom: 1px;
+        z-index: 100002;
+    }
+
+@keyframes example {
+    /* --- PHASE 1: Anlauf (Beschleunigung zur Wand) --- */
+    0% { 
+        right: 5%; 
+        bottom: 90%; 
+        transform: scaleX(1) rotate(0deg); 
+        background-image: url(../img/SVG/ich_skate2.svg);
+        animation-timing-function: ease-in; 
+    }
+
+    /* --- PHASE 2: CRASH (Aufprall an der Wand) --- */
+    30% { 
+        right: 98%;      
+        bottom: 40%;     
+        transform: scaleX(1) rotate(-15deg); 
+        background-image: url(../img/SVG/ich_skate2.svg);
+        animation-timing-function: ease-out; 
+    }
+
+    /* --- ZWISCHENSCHRITT: Kurz vor dem Gipfel (59%) --- */
+    59% {
+        background-image: url(../img/SVG/ich_skate2.svg);
+    }
+
+    /* --- PHASE 3: DER SCHEITELPUNKT (60%) - BILDWECHSEL! --- */
+    60% {
+        right: 50%;
+        bottom: 85%;     
+        transform: scaleX(-1) rotate(-180deg); 
+        background-image: url(../img/SVG/ich_sitzend.svg);
+        animation-timing-function: ease-in;
+    }
+
+    /* --- PHASE 4: LANDUNG --- */
+    100% { 
+        right: 6%; 
+        bottom: 96px; 
+        background-image: url(../img/SVG/ich_sitzend.svg);
+        transform: scaleX(-1) rotate(-360deg); 
+    }
+}
+}
+
+
+
+
+
