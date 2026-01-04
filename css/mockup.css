@@ -115,10 +115,10 @@
 
 .tablet-mockup-quer {
   position: relative;
-   border: 8px solid #000000; 
-   border-radius: 12px; 
-   aspect-ratio: 4/3; 
-     z-index: 10;
+  border: 8px solid #000000; 
+  border-radius: 12px; 
+  aspect-ratio: 4/3; 
+  z-index: 10;
 
 }
 
@@ -172,16 +172,16 @@
 .custom-arrows {
     width: 8%; 
     opacity: 1; 
+   
 }
 
 /* Das Icon selbst (Der Pfeil) */
 .custom-arrows .carousel-control-prev-icon,
 .custom-arrows .carousel-control-next-icon {
-    _background-color: var(--gelb); 
-    _border: solid #333 1px ;
     border-radius: 50%; 
     padding:25px; 
     background-size: 100% 100%; 
+       z-index: 100 !important;
     
 }
 .custom-arrows .carousel-control-prev-icon {

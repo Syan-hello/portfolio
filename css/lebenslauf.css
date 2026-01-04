@@ -54,8 +54,6 @@
 }
 
 
-
-
 /* Den Textbereich flexibel machen */
 .cv-card .card-body {
     flex-grow: 1 ; /* Füllt den restlichen Platz aus */
@@ -115,9 +113,10 @@
         min-height: 350px;
     }
     
-    /* 3. Die Pfeile positionieren, damit sie nicht die Karte überlagern */
+  
     .carousel-control-prev, 
     .carousel-control-next {
         width: 40px; 
+       
     }
 }
