@@ -6,6 +6,7 @@
 }
 
 
+
   /* ____________Menueee______________________________*/
   
 
@@ -120,14 +121,10 @@
    .nav-link {
     text-decoration: none;
     font-size: 2.5rem;
-    margin-bottom: 2rem;
-    margin-left: 1.4rem;
+    margin-bottom: 1.8rem;
+    padding-left: 1rem !important;
 
    
   }
   
 }
-
-
-
-  

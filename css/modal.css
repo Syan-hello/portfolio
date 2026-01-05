@@ -50,36 +50,6 @@
 }
 
 
-@media (max-width: 991.98px) {
-    #artworkModal .modal-body {
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        overflow: hidden; 
-    }
-
-    /* Die Text-Spalte oben */
-    #artworkModal .col-lg-4 {
-        height: 35% !important; 
-        order: 1; 
-        padding: 1.5rem !important; 
-        border-right: none !important;
-        border-bottom: 1px solid #333;
-        overflow-y: auto; 
-    }
-
-    /* Die Bild-Spalte unten */
-    #artworkModal .col-lg-8 {
-        height: 65% !important; 
-        order: 2;
-    }
-
-
-    #artworkModal .btn-close {
-        padding: 2rem !important; 
-        font-size: 1rem;
-    }
-}
 
 
 #modalCarouselInner .carousel-item {
@@ -93,4 +63,36 @@
     object-fit: contain;
     display: block;
     margin: auto;
+}
+
+@media (max-width: 991.98px) {
+    #artworkModal .modal-body {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow: hidden; 
+    }
+
+    /* Die Text-Spalte oben */
+    #artworkModal .col-lg-4 {
+        height: 45% !important; 
+        order: 1; 
+        padding: 1.5rem !important; 
+        border-right: none !important;
+        border-bottom: 1px solid #333;
+        overflow-y: auto; 
+    }
+
+    /* Die Bild-Spalte unten */
+    #artworkModal .col-lg-8 {
+        height: 55% !important; 
+        order: 2;
+        margin-top: -10rem;
+    }
+
+
+    #artworkModal .btn-close {
+        padding: 2rem !important; 
+        font-size: 1rem;
+    }
 }

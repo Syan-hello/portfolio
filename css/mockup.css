@@ -195,7 +195,7 @@
 .custom-arrows:hover .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.8); 
     background-color: var(--rosa);
-    border: solid 0.5rem;
+    
     
 }
 .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
