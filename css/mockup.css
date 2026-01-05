@@ -238,6 +238,7 @@
     border-radius: 6px; 
     min-width: 0 !important; 
     display: inline-block;
+
   }
 
   .phone-mockup {
@@ -276,6 +277,8 @@
   .tablet-mockup {
       overflow: hidden !important; 
       pointer-events: none; /* Verhindert Wischen im Mockup */
+      object-fit: cover !important;
+      object-position: top !important;
   }
 }
 
