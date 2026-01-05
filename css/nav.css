@@ -17,11 +17,9 @@
 
   #menue {
     position: absolute;
-    background-color: #fb628b;
     background-color:  #fd7ea0;
     z-index: 1000;
     width: 100%;
-    _border-bottom:solid 0.1rem;
     text-align: end;
   }
 
@@ -46,19 +44,11 @@
     display: block; /* !!!!!! Icon wird eingeblendet */
   }
 
-  #menue span{
-    background-color: #4cc4f7;
-    height: 1px;
-    width: 100%;
-    position: absolute;
-  
-  }
 
    .nav-link {
     text-decoration: none;
     font-size: 5rem;
-    _text-align: center;
-    margin-left: 5rem;
+    padding-left: 5rem !important;
     color:#ececec;
   }
 

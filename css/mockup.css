@@ -179,9 +179,9 @@
 .custom-arrows .carousel-control-prev-icon,
 .custom-arrows .carousel-control-next-icon {
     border-radius: 50%; 
-    padding:25px; 
-    background-size: 100% 100%; 
-       z-index: 100 !important;
+    padding:35px; 
+    background-size: 80% 80%; 
+    z-index: 100 !important;
     
 }
 .custom-arrows .carousel-control-prev-icon {
@@ -194,6 +194,8 @@
 .custom-arrows:hover .carousel-control-prev-icon,
 .custom-arrows:hover .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.8); 
+    background-color: var(--rosa);
+    border: solid 0.5rem;
     
 }
 .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {

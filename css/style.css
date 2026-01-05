@@ -9,7 +9,6 @@
 }
 
 img{
-    _max-width: 100%;
     border-radius: 5px !important;   
 }
 
@@ -34,6 +33,7 @@ img{
 
 .btn-primary:hover {
     background-color: #333;
+    background-color: var(--rosa);
     color: var(--light);
     border: solid #333;
 }

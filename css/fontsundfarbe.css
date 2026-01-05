@@ -5,7 +5,7 @@
     font-family: 'Rubik Light';
     font-style: normal;
     font-weight: 300;
-    src: url('/fonts/rubik-v28-latin/rubik-v28-latin-300.woff2') format('woff2');
+    src: url('fonts/rubik-v28-latin/rubik-v28-latin-300.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -17,7 +17,7 @@
     font-family: 'Rubik Regular';
     font-style: normal;
     font-weight: 400;
-    src: url('/fonts/rubik-v28-latin/rubik-v28-latin-regular.woff2') format('woff2');
+    src: url('fonts/rubik-v28-latin/rubik-v28-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -28,7 +28,7 @@
     font-family: 'Rubik Bold';
     font-style: normal;
     font-weight: 500;
-    src: url('/fonts/rubik-v28-latin/rubik-v28-latin-500.woff2') format('woff2');
+    src: url('fonts/rubik-v28-latin/rubik-v28-latin-500.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -51,18 +51,15 @@
 }
 
 
-
 .display-7 {
     font-size: 1.6rem;
 }
-
 
 
 body{
     font-family: 'Rubik Light';
     color: #333;
     background-color: var(--light);
-
  
 }
 
