@@ -35,7 +35,7 @@ img{
     background-color: #333;
     background-color: var(--rosa);
     color: var(--light);
-    border: solid #333;
+    border: solid 1px #333;
 }
 
 
