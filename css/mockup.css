@@ -251,6 +251,7 @@
     border-radius: 6px; 
     min-width: 0 !important; 
     display: inline-block;
+    height: 20px;
   }
   
   .phone-mockup img, .phone-mockup video,
