@@ -2,18 +2,18 @@
   max-width: 1600px;
 }
 
-/* FIX: line-height 0 entfernt den Geister-Abstand unter Bildern */
+/* --- CONTAINER FIXES --- */
 .mockup-wrapper {
   margin-top: 2rem;
   position: relative;
   display: inline-block;
   width: 100%;
   max-width: 800px;
-  line-height: 0;
+  line-height: 0;   /* Killt Geister-Abstände */
   font-size: 0;
 }
 
-/* FIX: Erzwingt, dass Bilder keine Abstände unten haben */
+/* Alles als Block erzwingen */
 .mockup-wrapper img, 
 .desktop-stack img,
 .monitor-frame,
@@ -21,7 +21,8 @@
 .monitor-screen video,
 .phone-mockup img, 
 .phone-mockup video,
-.tablet-mockup img {
+.tablet-mockup img,
+.tablet-mockup video {
   display: block !important;
   width: 100%;
   height: auto;
@@ -38,6 +39,7 @@
   position: relative;
 }
 
+/* --- DESKTOP MONITOR (Funktioniert, weil Height fest ist) --- */
 .monitor-screen {
   position: absolute;
   z-index: 1; 
@@ -46,7 +48,7 @@
   top: 3.5%;    
   left: 3.1%;   
   width: 93.8%; 
-  height: 63.8%;
+  height: 63.8%; /* DAS ist der Grund, warum es hier geht */
   border-radius: 4px; 
 }
 
@@ -54,8 +56,7 @@
 .monitor-screen { -ms-overflow-style: none; scrollbar-width: none; }
 
 
-/* --- PHONE MOCKUP --- */
-
+/* --- PHONE MOCKUP (iOS Fix integriert) --- */
 .phone-mockup {
   position: absolute;
   bottom: 5%; 
@@ -64,7 +65,12 @@
   width: 15%; 
   min-width: 80px; 
   aspect-ratio: 9/19.5; 
+  
+  /* SCROLL FIX FÜR ECHTE HANDYS: */
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; /* Weiches Scrollen auf iOS */
+  transform: translate3d(0,0,0);     /* Zwingt Hardware-Beschleunigung & Clipping */
+  
   border: 4px solid #000000;
   border-radius: 16px; 
   background-color: #fff;
@@ -74,8 +80,7 @@
 .phone-mockup { -ms-overflow-style: none; scrollbar-width: none; }
 
 
-/* --- TABLET MOCKUP --- */
-
+/* --- TABLET MOCKUP (iOS Fix integriert) --- */
 .tablet-mockup {
   position: absolute;
   bottom: 5%; 
@@ -83,7 +88,12 @@
   z-index: 10; 
   width: 25%; 
   aspect-ratio: 3/4; 
-  overflow-y: scroll; 
+  
+  /* SCROLL FIX FÜR ECHTE HANDYS: */
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  transform: translate3d(0,0,0);
+  
   border: 8px solid #000000; 
   border-radius: 12px; 
   background-color: #fff;
@@ -93,34 +103,30 @@
 .tablet-mockup { -ms-overflow-style: none; scrollbar-width: none; }
 
 
+/* --- TABLET QUER (Video Fix) --- */
 .tablet-mockup-quer {
   position: relative;
   width: 100%;
   max-width: 800px; 
-  margin: 0 auto; 
+  margin: 0 auto;
   border: 8px solid #000000; 
   border-radius: 12px; 
   aspect-ratio: 4/3; 
   z-index: 10;
-  overflow: hidden; 
+  overflow: hidden; /* Wichtig für Video-Ecken */
 }
 
-.tablet-mockup-quer video,
-.tablet-mockup-quer img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; 
-  display: block;
-}
-.tablet-mockup-quer img {
-  width: 100%;
-  height: auto;
+/* Spezifischer Fix für Inhalte im Quer-Tablet */
+.tablet-mockup-quer img,
+.tablet-mockup-quer video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
   display: block;
 }
 
 
 /* --- CAROUSEL CONTAINER --- */
-
 .mockup-carousel-container {
     width: 100%;
     padding-left: 50px; 
@@ -128,8 +134,7 @@
     padding-bottom: 20px;
 }
 
-/* --- ARROWS DESKTOP STANDARD --- */
-
+/* --- ARROWS DESKTOP --- */
 .custom-arrows {
     width: 8%; 
     opacity: 1; 
@@ -146,7 +151,6 @@
 .custom-arrows .carousel-control-prev-icon {
   background-image: url(../img/icons/arrows/back.svg);
 }
-
 .custom-arrows .carousel-control-next-icon {
   background-image: url(../img/icons/arrows/front.svg);
 }
@@ -163,26 +167,24 @@
 }
 
 
-/* --- MOBILE MEDIA QUERY (max-width: 600px) --- */
-
+/* --- MOBILE (max-width: 600px) --- */
 @media (max-width: 600px) {
 
-  /* 1. Container vergrößern für Pfeile unten */
   .mockup-carousel-container {
     width: 100%;
     padding-left: 10px;  
     padding-right: 10px;
-    padding-bottom: 80px; /* Platz für Pfeile */
+    padding-bottom: 80px; 
     position: relative; 
   }
 
   .mockup-wrapper {
     margin-bottom: 0; 
     display: inline-block;
-    line-height: 0; /* Wichtig für Mobile */
+    line-height: 0; 
   }
 
-  /* 2. Pfeile nach unten schieben */
+  /* Pfeile unten */
   .custom-arrows {
     top: auto;      
     bottom: 0;       
@@ -207,7 +209,7 @@
   .custom-arrows .carousel-control-next-icon {
       padding: 25px;      
       background-size: 60%;
-    
+      
   }
   
   .custom-arrows:hover .carousel-control-prev-icon,
@@ -215,41 +217,39 @@
       background-color: transparent; 
   }
 
-  /* 3. Mockups fixieren (bottom: 2% statt 0) */
+  /* --- MOBILE MOCKUP POSITIONS --- */
   
   .tablet-mockup {
     width: 32%;       
     left: -2%;          
-    bottom: 2%; /* FIX: Leicht anheben */     
+    bottom: 2%; 
     top: auto;      
     right: auto;        
     border-width: 3px;  
     border-radius: 6px; 
     min-width: 0 !important; 
-    display: block; /* FIX: Block statt Inline-Block */
+    display: block;
+    
+    /* Sicherheitshalber auch hier overflow fixes */
+    transform: translate3d(0,0,0);
   }
 
   .phone-mockup {
     width: 20%;         
     right: -2%;         
-    bottom: 2%; /* FIX: Leicht anheben */        
+    bottom: 2%;        
     top: auto;
     left: auto;         
     border-width: 2px;
     border-radius: 6px; 
     min-width: 0 !important; 
-    display: block; /* FIX: Block statt Inline-Block */
-  }
-  
-  .phone-mockup img, .phone-mockup video,
-  .tablet-mockup img, .tablet-mockup video {
-      border-radius: 2px; 
-      display: block;
+    display: block;
+    
+    transform: translate3d(0,0,0);
   }
 }
 
 /* --- TABLET / LAPTOP ZWISCHENSTUFE --- */
-
 @media (max-width: 900px) {
   .tablet-mockup {
     left: 0;
