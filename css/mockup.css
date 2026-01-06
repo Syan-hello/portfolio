@@ -238,7 +238,7 @@
     border-radius: 6px; 
     min-width: 0 !important; 
     display: inline-block;
-    max-height: 190px;
+    
 
   }
 
@@ -252,7 +252,7 @@
     border-radius: 6px; 
     min-width: 0 !important; 
     display: inline-block;
-    max-height: 140px;
+    
   }
   
   .phone-mockup img, .phone-mockup video,
