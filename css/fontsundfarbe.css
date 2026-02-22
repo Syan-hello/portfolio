@@ -35,19 +35,19 @@
 
 
   :root{
-    --white: rgba(215, 215, 215, 0.703);
+   
     --grau: #747474;
     --blau: #4cc4f7;
     --gelb: #FCF8CD;
     --rot: #fa5480;
     --rosa:  #fd7ea0;;
-    --green:#0F0;
-    --light: rgb(254, 252, 248); 
+    --gruen:rgb(192, 242, 192);
+    --cream: rgb(254, 252, 248); 
 }
 
-.bg-light {
+.bg-cream {
     background-color: rgb(254, 252, 248) !important;  
-     
+     color: #333;
 }
 
 
@@ -55,7 +55,7 @@
     font-size: 2.2rem;
 }
 .display-6 {
-    font-size: calc(1.525rem + 1vw);
+    font-size: calc(1.325rem + 0.9vw);
     line-height: 1.4em;
 }
 
@@ -72,8 +72,10 @@ body{
        color: rgb(141, 225, 141) !important;
 }
 
-.bg-light {
-    color: #333 !important;
+.fw-bold {
+
+    font-weight: 400!important;
+
 }
 
 
@@ -99,7 +101,7 @@ main{
 }
 body{
 
-    background: linear-gradient(to right , var(--rosa) 90%, #333 10%);
+    background: linear-gradient(to right , var(--gruen) 100%, #333 0%);
     background-repeat: no-repeat;
     background-attachment: fixed;
     min-height: 100vh;

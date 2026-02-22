@@ -31,12 +31,8 @@
 
   }
 
- .nav-link {
-    text-decoration: none;
-    font-size: 3rem;
-    text-align: start;
-   
-  }
+
+  
   nav ul li a:hover{
     color:#ff8282;
   }
@@ -48,9 +44,10 @@
 
    .nav-link {
     text-decoration: none;
-    font-size: 5rem;
+    font-size: 3rem;
     padding-left: 5rem !important;
     color:#ececec;
+    text-align: start;
   }
 
   .nav-link:hover {
