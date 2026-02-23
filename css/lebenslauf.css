@@ -12,7 +12,6 @@
 }
 
 #lebenslauf .card-body {
-  
     padding: 1.2rem;
     border-top: solid #333;
     border-bottom-left-radius: 8px;
@@ -74,30 +73,29 @@
 #lebenslauf .cv-card {
     display: flex;
     flex-direction: column;
-    height: 590px; /* Feste Höhe setzen (Wert je nach längstem Text anpassen) */
+    height: 560px; /* Feste Höhe setzen (Wert je nach längstem Text anpassen) */
     max-width: 550px;
     width: 100%;
 }
 
 /* 2. Den Bildern eine feste Höhe und object-fit geben, damit sie alle exakt gleich groß sind */
 #lebenslauf .cv-card img {
-    height: 370px; /* Einheitliche Bildhöhe */
-    object-fit: cover; /* Verhindert, dass Bilder gestaucht werden */
+    height: 370px; 
+    object-fit: cover;
     width: 100%;
-
-    border-top-left-radius: 8px; /* Optische Anpassung an deine Card */
+    border-top-left-radius: 8px; 
     border-top-right-radius: 8px;
 }
 
-/* 3. Textbereich flexibel machen (bereits von dir korrekt angelegt) */
+/* Textbereich  */
 #lebenslauf .cv-card .card-body {
-    flex-grow: 1 ; /* Füllt den restlichen Platz aus */
+    flex-grow: 1 ;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Text beginnt immer oben */
+    justify-content: flex-start;
 }
 
-/* 3. WICHTIG: Damit der Schatten nicht abgeschnitten wird */
+/* */
 #lebenslaufCarousel .carousel-inner {
     padding-right: 2rem;  
     padding-bottom: 2rem; 
@@ -108,10 +106,15 @@
 #lebenslaufCarousel .carousel-item > div {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Karten oben bündig */
+    align-items: flex-start; 
     width: 100%;
 }
 
+    .carousel-control-prev, 
+    .carousel-control-next {
+        width: 40px; 
+        z-index: 100;
+    }
 
 
 
@@ -123,7 +126,6 @@
         overflow: visible; 
     }
 
-    /* Karte zentrieren und Höhe anpassen */
     #lebenslauf .cv-card {
         margin-left: auto;
         margin-right: auto;

@@ -64,18 +64,16 @@
 body{
     font-family: 'Rubik Light';
     color: #333;
-    background-color: var(--light);
+    background-color: var(--cream);
  
 }
 
 .text-gruen {
-       color: rgb(141, 225, 141) !important;
+    color: rgb(141, 225, 141) !important;
 }
 
 .fw-bold {
-
     font-weight: 400!important;
-
 }
 
 
@@ -92,13 +90,7 @@ body{
     font-family:'Rubik' ;
 }
 
-main{
-    background: linear-gradient(to top right , var(--) 50%, var(--green) 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    z-index: 10;
-}
+
 body{
 
     background: linear-gradient(to right , var(--gruen) 100%, #333 0%);
