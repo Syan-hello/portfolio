@@ -1,6 +1,6 @@
 
 #projectSlider {
-  max-width: 1600px;
+  max-width: 1800px;
 }
 
 .mockup-wrapper {
@@ -9,6 +9,15 @@
   display: inline-block;
   width: 100%;
   max-width: 800px; 
+}
+
+
+.mockup-carousel-container {
+  width: 100%;
+  padding-left: 0px;  
+  padding-right: 0px;
+  padding-bottom: 80px; 
+  position: relative; 
 }
 
 
@@ -41,8 +50,6 @@
   left: 3.1%;   /* (10.77 / 352.86) * 100 */
   width: 93.8%; /* (331.32 / 352.86) * 100 */
   height: 63.8%;/* (185.09 / 290.07) * 100 */
-  
-
   border-radius: 4px; 
 }
 
@@ -61,7 +68,7 @@
 
 .phone-mockup {
   position: absolute;
-  bottom: 5%; 
+  bottom: 11%; 
   right: -5%;
   z-index: 10; 
   width: 15%; 
@@ -70,8 +77,8 @@
   overflow-y: scroll;
   
   /* Styling */
-  border: 4px solid #000000;
-  border-radius: 16px; 
+  border: 2px solid #333;
+  border-radius: 10px; 
   background-color: #fff;
   
 }
@@ -89,13 +96,13 @@
 
 .tablet-mockup {
   position: absolute;
-  bottom: 5%; 
-  left: -10%; 
-  z-index: 10;
-  width: 25%; 
+  bottom: 6%; 
+  left: -6%; 
+  z-index: 7;
+  width: 33%; 
   aspect-ratio: 3/4; 
   overflow-y: scroll; 
-  border: 8px solid #000000; 
+  border: 2px solid #333; 
   border-radius: 12px; 
   background-color: #fff;
  
@@ -112,6 +119,7 @@
 .tablet-mockup { -ms-overflow-style: none; scrollbar-width: none; }
 
 .tablet-mockup-quer {
+  margin: 2rem;
   position: relative;
   border: 8px solid #000000; 
   border-radius: 12px; 
@@ -158,7 +166,7 @@
 .custom-arrows:hover .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.8); 
     background-color: var(--rosa);
-    
+    border: solid 1px black;
     
 }
 .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
@@ -167,13 +175,13 @@
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
   
   .mockup-carousel-container {
     width: 100%;
-    padding-left: 10px;  
-    padding-right: 10px;
+    padding-left: 0px;  
+    padding-right: 0px;
     
   
     padding-bottom: 80px; 
@@ -181,7 +189,7 @@
   }
 
   .mockup-wrapper {
-    margin-bottom: 0; 
+    margin-bottom: 5rem; 
     display: inline-block;
   }
 
@@ -189,7 +197,7 @@
   
   .custom-arrows {
     /* Positionierung ändern */
-    top: auto;       /* Nicht mehr oben/mittig */
+    top: 350px;       /* Nicht mehr oben/mittig */
     bottom: 0;       /* Ganz unten am Rand des Containers */
     height: 60px;    /* Feste Höhe für den Bereich */
     width: 40%;      
@@ -200,13 +208,13 @@
 
 
   .carousel-control-prev.custom-arrows {
-    left: 20px;            
+    left: 30%;            
     justify-content: flex-start;
   }
 
 
   .carousel-control-next.custom-arrows {
-    right: 20px;        
+    right: 30%;        
     justify-content: flex-end;
   }
 

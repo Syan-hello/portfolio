@@ -25,6 +25,10 @@ img{
     
 }
 
+.btn {
+    border-radius: 8px;
+}
+
 .btn-primary {
     background-color: var(--cream);
     color: #333;

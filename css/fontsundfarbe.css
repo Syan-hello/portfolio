@@ -4,7 +4,7 @@
     /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
     font-family: 'Rubik Light';
     font-style: normal;
-    font-weight: 300;
+    font-weight: 300 !important;
     src: url('/fonts/rubik-v28-latin/rubik-v28-latin-300.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
@@ -33,14 +33,12 @@
 }
 
 
-
-  :root{
-   
+:root{
     --grau: #747474;
     --blau: #4cc4f7;
     --gelb: #FCF8CD;
     --rot: #fa5480;
-    --rosa:  #fd7ea0;;
+    --rosa:  #fd7ea0;
     --gruen:rgb(192, 242, 192);
     --cream: rgb(254, 252, 248); 
 }
@@ -50,26 +48,45 @@
      color: #333;
 }
 
+.bg-rosa {
+    background-color: var(--rosa);
+}
+
+.bg-gruen {
+    background-color: var(--gruen);
+}
 
 .display-7 {
     font-size: 2.2rem;
+    font-weight: 300;
 }
 .display-6 {
     font-size: calc(1.325rem + 0.9vw);
     line-height: 1.4em;
 }
+.display-7 {
+    font-size: clamp(1rem, 6vw, 2.2rem) !important;
 
+  }
 
 
 body{
     font-family: 'Rubik Light';
     color: #333;
-    background-color: var(--cream);
+    background: linear-gradient(to right , var(--gruen) 100%, #333 0%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    z-index: 10;
  
 }
 
 .text-gruen {
     color: rgb(141, 225, 141) !important;
+}
+
+.text-cream {
+    color: var(--gelb);
 }
 
 .fw-bold {
@@ -83,6 +100,7 @@ body{
 
 .bg-black {
     background-color: #333 !important;
+    color: var(--cream) !important;
 }
 
 .text-rosa {
@@ -91,11 +109,3 @@ body{
 }
 
 
-body{
-
-    background: linear-gradient(to right , var(--gruen) 100%, #333 0%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    min-height: 100vh;
-    z-index: 10;
-}
