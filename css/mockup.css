@@ -197,7 +197,7 @@
   
   .custom-arrows {
     /* Positionierung ändern */
-    top: 350px;       /* Nicht mehr oben/mittig */
+    top: 390px;       /* Nicht mehr oben/mittig */
     bottom: 0;       /* Ganz unten am Rand des Containers */
     height: 60px;    /* Feste Höhe für den Bereich */
     width: 40%;      
