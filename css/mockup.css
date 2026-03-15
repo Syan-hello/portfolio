@@ -141,29 +141,35 @@
     padding-bottom: 20px;
 }
 
-.custom-arrows {
+.custom-arrows, .custom-arrows_2 {
     width: 8%; 
     opacity: 1; 
    
 }
 
 .custom-arrows .carousel-control-prev-icon,
-.custom-arrows .carousel-control-next-icon {
+.custom-arrows .carousel-control-next-icon ,
+
+.custom-arrows_2 .carousel-control-prev-icon,
+.custom-arrows_2 .carousel-control-next-icon{
     border-radius: 50%; 
     padding:35px; 
     background-size: 80% 80%; 
     z-index: 100 !important;
     
 }
-.custom-arrows .carousel-control-prev-icon {
+.custom-arrows .carousel-control-prev-icon, .custom-arrows_2 .carousel-control-prev-icon {
   background-image: url(../img/icons/arrows/back.svg);
 }
 
-.custom-arrows .carousel-control-next-icon {
+.custom-arrows .carousel-control-next-icon, 
+.custom-arrows_2 .carousel-control-next-icon {
   background-image: url(../img/icons/arrows/front.svg);
 }
 .custom-arrows:hover .carousel-control-prev-icon,
-.custom-arrows:hover .carousel-control-next-icon {
+.custom-arrows:hover .carousel-control-next-icon,
+.custom-arrows_2:hover .carousel-control-prev-icon,
+.custom-arrows_2:hover .carousel-control-next-icon {
     background-color: rgba(0, 0, 0, 0.8); 
     background-color: var(--rosa);
     border: solid 1px black;
@@ -206,21 +212,32 @@
     align-items: center;
   }
 
+.custom-arrows_2 {
+    /* Positionierung ändern */
+    top: 40vh;       /* Nicht mehr oben/mittig */
+    bottom: 0;       /* Ganz unten am Rand des Containers */
+    height: 60px;    /* Feste Höhe für den Bereich */
+    width: 40%;      
+    opacity: 1;
+    display: flex;
+    align-items: center;
+  }
 
-  .carousel-control-prev.custom-arrows {
+  .carousel-control-prev.custom-arrows, .carousel-control-prev.custom-arrows_2 {
     left: 30%;            
     justify-content: flex-start;
   }
 
 
-  .carousel-control-next.custom-arrows {
+  .carousel-control-next.custom-arrows, .carousel-control-next.custom-arrows_2 {
     right: 30%;        
     justify-content: flex-end;
   }
 
 
   .custom-arrows .carousel-control-prev-icon,
-  .custom-arrows .carousel-control-next-icon {
+  .custom-arrows .carousel-control-next-icon, .custom-arrows_2 .carousel-control-prev-icon,
+  .custom-arrows_2 .carousel-control-next-icon{
       padding: 25px;      
       background-size: 60%;
       background-color: transparent;
@@ -229,7 +246,9 @@
   
   
   .custom-arrows:hover .carousel-control-prev-icon,
-  .custom-arrows:hover .carousel-control-next-icon {
+  .custom-arrows:hover .carousel-control-next-icon,
+  .custom-arrows_2:hover .carousel-control-prev-icon,
+  .custom-arrows_2:hover .carousel-control-next-icon  {
       background-color: transparent; 
   }
 
